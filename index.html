@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EIRP Construcciones | Construimos tus sueños</title>
+  <meta name="description" content="EIRP Construcciones - Empresa constructora especializada en construcción, remodelación y diseño arquitectónico. Solicita tu cotización.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="header__logo">
+        <img src="assets/logo.png" alt="EIRP Construcciones" class="header__logo-img">
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Inicio</a></li>
+          <li><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#cotizar" class="nav__link nav__link--cta">Cotizar</a></li>
+        </ul>
+      </nav>
+      <button class="header__menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <h1 class="hero__title">Construimos tus <span class="text-accent">sueños</span></h1>
+      <p class="hero__subtitle">Más de 10 años de experiencia en construcción, remodelación y diseño arquitectónico con los más altos estándares de calidad.</p>
+      <div class="hero__actions">
+        <a href="#cotizar" class="btn btn--primary">Solicitar Cotización</a>
+        <a href="#proyectos" class="btn btn--outline">Ver Proyectos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div class="stat">
+        <span class="stat__number" data-target="150">0</span><span class="stat__plus">+</span>
+        <span class="stat__label">Proyectos Completados</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number" data-target="10">0</span><span class="stat__plus">+</span>
+        <span class="stat__label">Años de Experiencia</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number" data-target="120">0</span><span class="stat__plus">+</span>
+        <span class="stat__label">Clientes Satisfechos</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number" data-target="25">0</span><span class="stat__plus">+</span>
+        <span class="stat__label">Profesionales</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <h2 class="section__title">Nuestros <span class="text-accent">Servicios</span></h2>
+      <p class="section__subtitle">Ofrecemos soluciones integrales en construcción para proyectos residenciales, comerciales e industriales.</p>
+      <div class="servicios__grid">
+        <div class="servicio-card" data-aos>
+          <div class="servicio-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 4L4 20v24l28 16 28-16V20L32 4z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M4 20l28 16m0 0l28-16M32 36v24" stroke="currentColor" stroke-width="3"/></svg>
+          </div>
+          <h3 class="servicio-card__title">Construcción</h3>
+          <p class="servicio-card__desc">Edificamos desde cero proyectos residenciales, comerciales e industriales con materiales de primera calidad.</p>
+        </div>
+        <div class="servicio-card" data-aos>
+          <div class="servicio-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="28" width="48" height="28" rx="2" stroke="currentColor" stroke-width="3"/><path d="M16 28V16a16 16 0 0132 0v12" stroke="currentColor" stroke-width="3"/><path d="M24 42h16M32 42v8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="servicio-card__title">Remodelación</h3>
+          <p class="servicio-card__desc">Transformamos y renovamos espacios existentes para darles una nueva vida y funcionalidad.</p>
+        </div>
+        <div class="servicio-card" data-aos>
+          <div class="servicio-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 56h48M12 56V28l20-16 20 16v28" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><rect x="24" y="38" width="16" height="18" stroke="currentColor" stroke-width="3"/><path d="M32 38v18M24 47h16" stroke="currentColor" stroke-width="3"/></svg>
+          </div>
+          <h3 class="servicio-card__title">Diseño Arquitectónico</h3>
+          <p class="servicio-card__desc">Creamos diseños innovadores y funcionales que reflejan tu visión y necesidades.</p>
+        </div>
+        <div class="servicio-card" data-aos>
+          <div class="servicio-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/><path d="M32 16v16l12 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="servicio-card__title">Gestión de Proyectos</h3>
+          <p class="servicio-card__desc">Supervisamos cada etapa de tu proyecto garantizando plazos, presupuesto y calidad.</p>
+        </div>
+        <div class="servicio-card" data-aos>
+          <div class="servicio-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 56l16-20 12 8 12-16 8 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="8" y="8" width="48" height="48" rx="4" stroke="currentColor" stroke-width="3"/></svg>
+          </div>
+          <h3 class="servicio-card__title">Acabados y Terminaciones</h3>
+          <p class="servicio-card__desc">Aplicamos acabados de alta calidad en pisos, muros, pintura y detalles finales.</p>
+        </div>
+        <div class="servicio-card" data-aos>
+          <div class="servicio-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 56V32l12-12 12 12v24" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M8 56h48" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><rect x="28" y="40" width="8" height="16" stroke="currentColor" stroke-width="3"/><path d="M16 24l16-16 16 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="servicio-card__title">Obra Civil</h3>
+          <p class="servicio-card__desc">Ejecutamos obras de infraestructura, cimentaciones, estructuras y movimiento de tierras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section class="section proyectos" id="proyectos">
+    <div class="container">
+      <h2 class="section__title">Nuestros <span class="text-accent">Proyectos</span></h2>
+      <p class="section__subtitle">Conoce algunos de los proyectos que hemos realizado con excelencia y compromiso.</p>
+      <div class="proyectos__filtros">
+        <button class="filtro-btn active" data-filter="todos">Todos</button>
+        <button class="filtro-btn" data-filter="residencial">Residencial</button>
+        <button class="filtro-btn" data-filter="comercial">Comercial</button>
+        <button class="filtro-btn" data-filter="remodelacion">Remodelación</button>
+      </div>
+      <div class="proyectos__grid">
+        <div class="proyecto-card" data-category="residencial" data-aos>
+          <div class="proyecto-card__img" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="proyecto-card__placeholder">Proyecto Residencial</div>
+          </div>
+          <div class="proyecto-card__info">
+            <span class="proyecto-card__cat">Residencial</span>
+            <h3 class="proyecto-card__title">Casa Moderna Las Palmas</h3>
+            <p class="proyecto-card__desc">Construcción completa de residencia moderna de 250m² con acabados premium.</p>
+          </div>
+        </div>
+        <div class="proyecto-card" data-category="comercial" data-aos>
+          <div class="proyecto-card__img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <div class="proyecto-card__placeholder">Proyecto Comercial</div>
+          </div>
+          <div class="proyecto-card__info">
+            <span class="proyecto-card__cat">Comercial</span>
+            <h3 class="proyecto-card__title">Plaza Comercial Centro</h3>
+            <p class="proyecto-card__desc">Desarrollo de plaza comercial con 12 locales y estacionamiento subterráneo.</p>
+          </div>
+        </div>
+        <div class="proyecto-card" data-category="remodelacion" data-aos>
+          <div class="proyecto-card__img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <div class="proyecto-card__placeholder">Remodelación</div>
+          </div>
+          <div class="proyecto-card__info">
+            <span class="proyecto-card__cat">Remodelación</span>
+            <h3 class="proyecto-card__title">Renovación Oficinas Corp</h3>
+            <p class="proyecto-card__desc">Remodelación integral de oficinas corporativas con diseño moderno open-space.</p>
+          </div>
+        </div>
+        <div class="proyecto-card" data-category="residencial" data-aos>
+          <div class="proyecto-card__img" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+            <div class="proyecto-card__placeholder">Proyecto Residencial</div>
+          </div>
+          <div class="proyecto-card__info">
+            <span class="proyecto-card__cat">Residencial</span>
+            <h3 class="proyecto-card__title">Residencial Valle Verde</h3>
+            <p class="proyecto-card__desc">Fraccionamiento de 20 casas con áreas verdes y amenidades compartidas.</p>
+          </div>
+        </div>
+        <div class="proyecto-card" data-category="comercial" data-aos>
+          <div class="proyecto-card__img" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+            <div class="proyecto-card__placeholder">Proyecto Comercial</div>
+          </div>
+          <div class="proyecto-card__info">
+            <span class="proyecto-card__cat">Comercial</span>
+            <h3 class="proyecto-card__title">Nave Industrial Norte</h3>
+            <p class="proyecto-card__desc">Construcción de nave industrial de 1,500m² con oficinas administrativas.</p>
+          </div>
+        </div>
+        <div class="proyecto-card" data-category="remodelacion" data-aos>
+          <div class="proyecto-card__img" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+            <div class="proyecto-card__placeholder">Remodelación</div>
+          </div>
+          <div class="proyecto-card__info">
+            <span class="proyecto-card__cat">Remodelación</span>
+            <h3 class="proyecto-card__title">Restaurante La Terraza</h3>
+            <p class="proyecto-card__desc">Remodelación completa de restaurante con terraza panorámica y cocina profesional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section class="section nosotros" id="nosotros">
+    <div class="container">
+      <div class="nosotros__grid">
+        <div class="nosotros__content" data-aos>
+          <h2 class="section__title section__title--left">Sobre <span class="text-accent">Nosotros</span></h2>
+          <p class="nosotros__text">En <strong>EIRP Construcciones</strong> somos una empresa dedicada a la construcción, remodelación y diseño arquitectónico. Contamos con un equipo de profesionales altamente capacitados y comprometidos con la excelencia.</p>
+          <p class="nosotros__text">Nuestra misión es transformar espacios y construir proyectos que superen las expectativas de nuestros clientes, utilizando materiales de primera calidad y tecnología de vanguardia.</p>
+          <div class="nosotros__values">
+            <div class="value">
+              <div class="value__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <h4>Calidad</h4>
+                <p>Materiales y mano de obra de primera</p>
+              </div>
+            </div>
+            <div class="value">
+              <div class="value__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h4>Puntualidad</h4>
+                <p>Cumplimos con los plazos acordados</p>
+              </div>
+            </div>
+            <div class="value">
+              <div class="value__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div>
+                <h4>Compromiso</h4>
+                <p>Tu proyecto es nuestra prioridad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nosotros__image" data-aos>
+          <div class="nosotros__image-placeholder">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="60" width="30" height="50" stroke="currentColor" stroke-width="3" fill="none"/><rect x="45" y="40" width="30" height="70" stroke="currentColor" stroke-width="3" fill="none"/><rect x="80" y="20" width="30" height="90" stroke="currentColor" stroke-width="3" fill="none"/><path d="M5 110h110" stroke="currentColor" stroke-width="3"/></svg>
+            <p>EIRP Construcciones</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cotizar -->
+  <section class="section cotizar" id="cotizar">
+    <div class="container">
+      <h2 class="section__title">Agenda tu <span class="text-accent">Cotización</span></h2>
+      <p class="section__subtitle">Cuéntanos sobre tu proyecto y agenda una cita con nuestro equipo. Te asesoramos sin compromiso.</p>
+      <div class="cotizar__grid">
+        <form class="cotizar__form" id="cotizarForm" data-aos>
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono *</label>
+              <input type="tel" id="telefono" name="telefono" required placeholder="+52 123 456 7890">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="servicio">Tipo de servicio</label>
+            <select id="servicio" name="servicio">
+              <option value="">Selecciona un servicio</option>
+              <option value="construccion">Construcción</option>
+              <option value="remodelacion">Remodelación</option>
+              <option value="diseno">Diseño Arquitectónico</option>
+              <option value="gestion">Gestión de Proyectos</option>
+              <option value="acabados">Acabados y Terminaciones</option>
+              <option value="obra-civil">Obra Civil</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fecha">Fecha preferida para cita</label>
+              <input type="date" id="fecha" name="fecha">
+            </div>
+            <div class="form-group">
+              <label for="hora">Hora preferida</label>
+              <select id="hora" name="hora">
+                <option value="">Selecciona horario</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Describe tu proyecto</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto, dimensiones, ubicación, presupuesto estimado..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span class="btn__text">Agendar Cotización</span>
+            <span class="btn__loading" style="display:none;">Agendando...</span>
+          </button>
+          <div class="form-message" id="formMessage"></div>
+        </form>
+        <div class="cotizar__info" data-aos>
+          <div class="cotizar__card">
+            <h3>Contacto Directo</h3>
+            <p>Prefiere contactarnos directamente? Estamos para ayudarte.</p>
+            <div class="cotizar__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>+52 123 456 7890</span>
+            </div>
+            <div class="cotizar__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>contacto@eirpconstrucciones.com</span>
+            </div>
+            <div class="cotizar__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Ciudad de México, México</span>
+            </div>
+          </div>
+          <a href="https://wa.me/521234567890?text=Hola%2C%20me%20interesa%20solicitar%20una%20cotizaci%C3%B3n%20para%20un%20proyecto%20de%20construcci%C3%B3n." class="btn btn--whatsapp btn--full" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Cotizar por WhatsApp
+          </a>
+          <div class="cotizar__horario">
+            <h4>Horario de atención</h4>
+            <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+            <p>Sábados: 9:00 AM - 2:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo.png" alt="EIRP Construcciones" class="footer__logo">
+          <p>Construimos tus sueños con calidad, compromiso y profesionalismo.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#cotizar">Cotizar</a></li>
+          </ul>
+        </div>
+        <div class="footer__servicios">
+          <h4>Servicios</h4>
+          <ul>
+            <li>Construcción</li>
+            <li>Remodelación</li>
+            <li>Diseño Arquitectónico</li>
+            <li>Gestión de Proyectos</li>
+            <li>Obra Civil</li>
+          </ul>
+        </div>
+        <div class="footer__contacto">
+          <h4>Contacto</h4>
+          <p>+52 123 456 7890</p>
+          <p>contacto@eirpconstrucciones.com</p>
+          <p>Ciudad de México, México</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 EIRP Construcciones. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/521234567890?text=Hola%2C%20me%20interesa%20solicitar%20una%20cotizaci%C3%B3n%20para%20un%20proyecto%20de%20construcci%C3%B3n." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
