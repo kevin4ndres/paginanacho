@@ -1,3 +1,20 @@
+// ===== CONFIGURACIÓN =====
+// Cambia aquí el número de WhatsApp (formato internacional, sin + ni espacios).
+// Recuerda actualizar también el teléfono y correo visibles en index.html.
+const WHATSAPP_NUMERO = '56912345678';
+const WHATSAPP_MENSAJE = 'Hola, me interesa solicitar una cotización para un proyecto de construcción.';
+
+function whatsappUrl(texto) {
+  return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(texto)}`;
+}
+
+document.querySelectorAll('[data-wa]').forEach(a => {
+  a.href = whatsappUrl(WHATSAPP_MENSAJE);
+});
+
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 // ===== Mobile Menu =====
 const menuBtn = document.getElementById('menuBtn');
 const nav = document.getElementById('nav');
@@ -109,7 +126,7 @@ filterBtns.forEach(btn => {
   });
 });
 
-// ===== Form Handling with Google Calendar =====
+// ===== Formulario de cotización =====
 const form = document.getElementById('cotizarForm');
 const formMessage = document.getElementById('formMessage');
 const submitBtn = document.getElementById('submitBtn');
@@ -120,51 +137,71 @@ form.addEventListener('submit', async (e) => {
   const nombre = document.getElementById('nombre').value.trim();
   const email = document.getElementById('email').value.trim();
   const telefono = document.getElementById('telefono').value.trim();
-  const servicio = document.getElementById('servicio').value;
+  const servicioSel = document.getElementById('servicio');
+  const servicio = servicioSel.value ? servicioSel.options[servicioSel.selectedIndex].text : '';
   const fecha = document.getElementById('fecha').value;
   const hora = document.getElementById('hora').value;
   const mensaje = document.getElementById('mensaje').value.trim();
 
-  // Validate required fields
   if (!nombre || !email || !telefono) {
     showMessage('Por favor completa todos los campos obligatorios.', 'error');
     return;
   }
 
-  // Build WhatsApp message as fallback
-  let whatsappMsg = `Hola, soy ${nombre}.%0A`;
-  whatsappMsg += `Correo: ${email}%0A`;
-  whatsappMsg += `Teléfono: ${telefono}%0A`;
-  if (servicio) whatsappMsg += `Servicio: ${servicio}%0A`;
-  if (fecha) whatsappMsg += `Fecha preferida: ${fecha}%0A`;
-  if (hora) whatsappMsg += `Hora preferida: ${hora}%0A`;
-  if (mensaje) whatsappMsg += `Proyecto: ${mensaje}%0A`;
-  whatsappMsg += `%0AMe gustaría agendar una cotización.`;
+  submitBtn.disabled = true;
+  submitBtn.querySelector('.btn__text').style.display = 'none';
+  submitBtn.querySelector('.btn__loading').style.display = 'inline';
 
-  // Show success and open WhatsApp
-  showMessage(
-    '¡Solicitud recibida! Te redirigimos a WhatsApp para confirmar tu cita.',
-    'success'
-  );
+  // Enviar a Netlify Forms (llega al panel de Netlify y por correo si se configura)
+  let enviado = false;
+  try {
+    const res = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    });
+    enviado = res.ok;
+  } catch (err) {
+    enviado = false;
+  }
 
-  // Open WhatsApp with the form data
-  setTimeout(() => {
-    window.open(
-      `https://wa.me/521234567890?text=${whatsappMsg}`,
-      '_blank'
-    );
-  }, 1500);
+  // Mensaje de WhatsApp con los datos del formulario
+  const fechaTxt = fecha ? fecha.split('-').reverse().join('-') : '';
+  const lineas = [
+    `Hola, soy ${nombre}.`,
+    `Correo: ${email}`,
+    `Teléfono: ${telefono}`,
+    servicio && `Servicio: ${servicio}`,
+    fechaTxt && `Fecha preferida: ${fechaTxt}`,
+    hora && `Hora preferida: ${hora}`,
+    mensaje && `Proyecto: ${mensaje}`
+  ].filter(Boolean);
+  const waLink = whatsappUrl(lineas.join('\n') + '\n\nMe gustaría agendar una cotización.');
 
-  form.reset();
+  formMessage.innerHTML = '';
+  const texto = document.createElement('span');
+  texto.textContent = enviado
+    ? '¡Solicitud recibida! Te contactaremos pronto. Si quieres, confírmala por WhatsApp: '
+    : 'No pudimos enviar el formulario. Envíanos tu solicitud por WhatsApp: ';
+  const link = document.createElement('a');
+  link.href = waLink;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.textContent = 'abrir WhatsApp';
+  formMessage.append(texto, link);
+  formMessage.className = `form-message ${enviado ? 'success' : 'error'}`;
+  formMessage.style.display = '';
+
+  submitBtn.disabled = false;
+  submitBtn.querySelector('.btn__text').style.display = '';
+  submitBtn.querySelector('.btn__loading').style.display = 'none';
+  if (enviado) form.reset();
 });
 
 function showMessage(text, type) {
   formMessage.textContent = text;
   formMessage.className = `form-message ${type}`;
-  setTimeout(() => {
-    formMessage.className = 'form-message';
-    formMessage.style.display = 'none';
-  }, 6000);
+  formMessage.style.display = '';
 }
 
 // ===== Set min date on date picker =====
