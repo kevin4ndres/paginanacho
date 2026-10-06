@@ -18,3 +18,12 @@ Después de enviar, el cliente puede además confirmar por WhatsApp.
 - **Teléfono, correo y ciudad:** en `index.html` (sección "Contacto Directo" y footer).
   Busca `+56 9 1234 5678`, `56912345678`, `contacto@eirpconstrucciones.cl` y `Santiago, Chile`.
 - **Proyectos:** reemplazar los recuadros "Foto próximamente" por fotos reales de obras.
+
+## Calculadora de proyecto
+Los valores están en `js/main.js`, objeto `CALC`:
+- `valorUF`: valor de la UF en pesos (actualizar cada cierto tiempo).
+- `ufPorM2`: UF/m² base por terminación (económica, media, premium).
+- `factorMaterial`: multiplicador por sistema constructivo.
+- `factorObra`: multiplicador por tipo de obra (nueva, ampliación, remodelación).
+- `margen`: rango ± que se muestra.
+Al tocar "Cotizar este proyecto", el resumen se copia al formulario y llega a Netlify en el campo `estimacion`.
