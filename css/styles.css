@@ -345,8 +345,10 @@ ul { list-style: none; }
 
 /* ===== Servicios ===== */
 .servicios {
-  background: var(--color-light);
+  background: var(--color-white);
 }
+
+.proyectos { background: var(--color-light); }
 
 .servicios__grid {
   display: grid;
@@ -355,7 +357,7 @@ ul { list-style: none; }
 }
 
 .servicio-card {
-  background: var(--color-white);
+  background: var(--color-light);
   padding: 40px 30px;
   border-radius: var(--radius);
   text-align: center;
@@ -736,7 +738,7 @@ ul { list-style: none; }
 
 /* ===== Nosotros ===== */
 .nosotros {
-  background: var(--color-light);
+  background: var(--color-white);
 }
 
 .nosotros__grid {
@@ -837,7 +839,7 @@ ul { list-style: none; }
 
 /* ===== Cotizar ===== */
 .cotizar {
-  background: var(--color-white);
+  background: var(--color-light);
 }
 
 .cotizar__grid {
@@ -968,7 +970,7 @@ ul { list-style: none; }
 }
 
 .cotizar__horario {
-  background: var(--color-light);
+  background: var(--color-white);
   padding: 24px;
   border-radius: var(--radius);
   margin-top: 20px;
